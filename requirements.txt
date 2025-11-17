@@ -1,3 +1,6 @@
-altair
-pandas
+torch
+transformers
 streamlit
+pandas
+numpy
+sentencepiece
