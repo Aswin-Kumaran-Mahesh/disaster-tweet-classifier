@@ -50,8 +50,8 @@ class LSTMClassifier(nn.Module):
 # ------------------- Shared tokenizer for BiLSTM -------------------
 @st.cache_resource
 def load_shared_tokenizer():
-    """Load tokenizer once for BiLSTM (uses DistilBERT tokenizer)"""
-    model_name = "Aswin92/distilbert-disaster-tweets"
+    """Load tokenizer once for BiLSTM (uses DeBERTa tokenizer)"""
+    model_name = "microsoft/deberta-v3-base"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     return tokenizer
 
