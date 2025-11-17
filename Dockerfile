@@ -1,20 +1,17 @@
-FROM python:3.13.5-slim
+FROM python:3.11-slim
 
+# Work inside /app
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    git \
-    && rm -rf /var/lib/apt/lists/*
+# Install Python deps
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY requirements.txt ./
-COPY src/ ./src/
+# Copy app code
+COPY app.py .
 
-RUN pip3 install -r requirements.txt
+# Expose the port Spaces expects for Docker apps
+EXPOSE 7860
 
-EXPOSE 8501
-
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
-
-ENTRYPOINT ["streamlit", "run", "src/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# Run our Streamlit app (NOT src/streamlit_app.py)
+CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0"]
