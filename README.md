@@ -44,10 +44,6 @@ All three models correctly flag this as a disaster.
 
 ---
 
-## 📂 Project Structure
-
----
-
 ## 📚 Dataset
 
 **Source:** Kaggle – Natural Language Processing with Disaster Tweets
