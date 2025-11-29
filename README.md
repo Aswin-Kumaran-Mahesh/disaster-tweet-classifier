@@ -1,79 +1,75 @@
-🌪️ Disaster Tweet Classifier V2
+# 🌪️ Disaster Tweet Classifier V2
 
-Live demo: https://huggingface.co/spaces/Aswin92/disaster-tweet-classifier-v2
+**Live demo:** https://huggingface.co/spaces/Aswin92/disaster-tweet-classifier-v2
 
-This project predicts whether a tweet describes a real disaster or not. It compares three different NLP models and shows how each one behaves on noisy social media text.
+This project predicts whether a tweet describes a real disaster or not.  
+It compares three different NLP models and shows how each one behaves on noisy social media text.
 
-🔍 Models Used
+---
 
-🧠 DeBERTa v3
+## 🔍 Models Used
+
+### 🧠 DeBERTa v3  
 Best overall model with the highest accuracy and macro F1.
 
-⚡ DistilBERT
-Lightweight and fast, strong performance for its size.
+### ⚡ DistilBERT  
+Lightweight and fast with strong performance for its size.
 
-🔁 BiLSTM (RNN)
+### 🔁 BiLSTM (RNN)  
 Classic sequence model used as a baseline.
 
-🚀 What the App Does
+---
 
-Takes a tweet as input
+## 🚀 What the App Does
 
-Predicts the probability of the tweet being a disaster
+- Takes a tweet as input  
+- Predicts the probability of the tweet being a disaster  
+- Applies thresholds to classify each model's prediction  
+- Displays all three model outputs side by side  
 
-Applies thresholds to classify each model's prediction
-
-Displays all three model outputs side by side
-
-Example test input:
+**Example test input:**  
 “Firefighters are trying to rescue people from burning buildings after the explosion.”
 
 All three models correctly flag this as a disaster.
 
-🛠️ Tech Stack
+---
 
-Python
+## 🛠️ Tech Stack
 
-Streamlit
+- Python  
+- Streamlit  
+- Hugging Face Transformers  
+- PyTorch  
+- Streamlit UI  
 
-Hugging Face Transformers
+---
 
-PyTorch
+## 📂 Project Structure
 
-Gradio or Streamlit UI (depending on your app file)
+---
 
-📂 Project Structure
-.
-├── streamlit_app.py          # Main app
-├── model_loader.py           # Model loading utilities
-├── requirements.txt
-├── README.md
-└── models/
-    ├── deberta_v3/
-    ├── distilbert/
-    └── bilstm/
+## 📚 Dataset
 
-📚 Dataset
+**Source:** Kaggle – Natural Language Processing with Disaster Tweets
 
-Kaggle: Natural Language Processing with Disaster Tweets
-Labels:
+Labels:  
+- 1 = disaster  
+- 0 = not disaster  
 
-1 = disaster
+---
 
-0 = not disaster
+## 🧠 Key Learnings
 
-🧠 Key Learnings
+- Comparing transformer models with RNNs  
+- Threshold-based classification  
+- Handling noisy social media text  
+- Deploying ML apps on Hugging Face Spaces  
 
-Comparing transformer models with RNNs
+---
 
-Threshold-based classification
+## 🔗 Links
 
-Handling social media text
+- **Live Demo:** https://huggingface.co/spaces/Aswin92/disaster-tweet-classifier-v2  
+- **GitHub Repo:** https://github.com/Aswin92/disaster-tweet-classifier
 
-Deploying ML models on Hugging Face Spaces
 
-🔗 Links
-
-Demo: https://huggingface.co/spaces/Aswin92/disaster-tweet-classifier-v2
-
-Repo: https://github.com/Aswin-Kumaran-Mahesh/disaster-tweet-classifier
