@@ -76,4 +76,4 @@ Deploying ML models on Hugging Face Spaces
 
 Demo: https://huggingface.co/spaces/Aswin92/disaster-tweet-classifier-v2
 
-Repo: https://github.com/Aswin92/disaster-tweet-classifier
+Repo: https://github.com/Aswin-Kumaran-Mahesh/disaster-tweet-classifier
